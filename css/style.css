@@ -16,7 +16,7 @@ body{
   font-family:'Poiret One', cursive;
   line-height: 1.5;
   background-color: var(--light-color);
-    
+   
 }
 
 a{
@@ -60,6 +60,9 @@ color: black;
   width: 100%;
 }
 
+.blue_span{
+  color: var(--primary-color);
+}
 .l_heading{
   font-size: 5rem;
 }
@@ -70,9 +73,9 @@ color: black;
 
 
 /* navbar */
+/* consider making the navbar sticky and transform from transparent background to only black when scrolling out of the header showcase */
 #navbar{
   transition: .3s ease;
-
 }
 
 #navbar:hover{
@@ -97,6 +100,17 @@ color: black;
   font-weight: bold;
 }
 
+#navbar .container ul li:last-child .btn{
+  color: white;
+  background-color: var(--primary-color);
+}
+
+#navbar .container ul li:last-child .btn:hover{
+  background-color: var(--secondary-color);
+  color: #000;
+
+}
+
 
 
 .logo{
@@ -118,7 +132,7 @@ color: black;
   opacity: 1;
 }
 
-#header .header_shadow{
+  .header_shadow{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,40 +174,72 @@ animation: content_animate 2s ease-in;
 
 
 
-#header .header_content .h1_header_span{
-  color: var(--primary-color);
-}
 
-/* info_1 */
+/*services showcase */
 #services .container{
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(2,1fr);
   font-size: 1.1rem;
   background: var(--light-color);
   color: white;
+  height: 200vh;
 }
 
-#services .container .btn{
+.container .btn{
   margin-top: .5rem;
 }
 
-.img_info1{
+.travel_img{
   background: url(/img/travel.jpg) no-repeat center center/cover;
 }
 
-.right_info,.left_info{
-  color:black ;
-  font-weight: bold;
-  text-align: center ;
-}
-
-.right_info h2,.left_info h2{
-  font-size: 2.5rem;
-}
-
-.img_info2{
+.project_img{
 background: url(/img/project.jpg) center center/cover no-repeat;
 }
 
-/*  */
+.marriage_img{
+  background:url(/img/marriage.jpg) center center/cover no-repeat;
+}
+
+
+.travel_info,.project_info,.more_info{
+  color:black ;
+  font-weight: bold;
+  text-align: center ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.travel_info h2,.project_info h2,.more_info h2{
+  font-size: 2.5rem;
+}
+
+ .marriage_img,.more_info{
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+
+.more_info{
+  position:absolute ;
+  top: 2439px;
+}
+
+.more_section_shadow{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  height: 100vh;
+  position: absolute;
+  top: 2439px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .2);
+}
+
+
