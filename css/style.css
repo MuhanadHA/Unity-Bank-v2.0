@@ -62,7 +62,7 @@ color: black;
 }
 
 .blue_span{
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 .l_heading{
   font-size: 5rem;
@@ -74,13 +74,9 @@ color: black;
 
 
 /* navbar */
-/* consider making the navbar sticky and transform from transparent background to only black when scrolling out of the header showcase */
-#navbar{
-  transition: .3s ease;
-}
 
-#navbar:hover{
-  background-color: var(--black-color);
+#navbar{
+  background-color: var(--dark-color);
 
 }
 
@@ -89,7 +85,8 @@ color: black;
  display: grid;
  align-items: center;
  grid-template-columns: .5fr 7fr;
- padding: 0 2rem;
+ padding: 0.3rem 2rem;
+ 
 }
 
 
@@ -112,38 +109,30 @@ color: black;
 }
 
 
-
 .logo{
  border-radius: none;
  width: 130%;
 }
 
-
 /* header */
 
 
-#header .header_background video{
+
+#header .header_background img{
   position: absolute;
-  top: -25px;
+  top: 0px;
   left: 0;
   width: 100%;
-  height: auto;
   z-index: -1;
-  opacity: 1;
 }
 
+
   .header_shadow{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  height: 106vh;
   position: absolute;
   top:0;
   left: 0;
   right: 0;
+  height: 110%;
   background: rgba(0, 0, 0, .4);
   z-index: -1;
 }
@@ -151,7 +140,8 @@ color: black;
 
 
 #header  .header_content{
-height: 95.3vh;
+
+height: 93.9vh;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -160,76 +150,71 @@ text-align: center;
 color: white;
 text-align: center;
 padding-bottom: 8rem;
-animation: content_animate 2s ease-in;
+/* background-color:rgba(0, 0, 0, .4); */
 }
-@keyframes content_animate {
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-
-
 
 
 
 /*services showcase */
 #services .container{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
   font-size: 1.1rem;
   background: var(--light-color);
-  color: white;
-  height: 200vh;
+  
 }
 
-.container .btn{
-  margin-top: .5rem;
+#services .container .btn{
+  margin-top: 1rem;
 }
 
-.travel_img{
-  background: url(/img/travel.jpg) no-repeat center center/cover;
+.travel,.project{
+  display: grid;
+grid-template-columns: repeat(2,1fr);
+align-items: center;
 }
 
-.project_img{
-background: url(/img/project.jpg) center center/cover no-repeat;
+.travel .travel_img,.project .project_img{
+ width: auto;
+ height: 100%;
 }
 
 
-
-.travel_info,.project_info,.more_info{
-  color:black ;
+.travel_info,.project_info{
+  color:black;
   font-weight: bold;
   text-align: center ;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.travel_info h2,.project_info h2,.more_info h2{
+.travel_info h2,.project_info h2,.marriage_info h2{
   font-size: 2.5rem;
 }
  
+.marriage{
+  background: url(/img/marriage.jpg)center center/cover no-repeat;
 
-.marriage_img{
-  opacity: .8;
-  background:url(/img/marriage.jpg) center center/cover no-repeat;
-  height: 100vh;  
-}
-#marriage{
-  background-color: #333;
   color: white;
-}
-.marriage_info{
-  position: absolute;
-  top: 2800px;
-text-align: center;
-width: 100%;
+  font-weight: bold;
 }
 
+
+.marriage_info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .4);
+  text-align: center;
+  height:100vh;
+
+}
+
+.marriage_info h2{
+  font-size: 2.2rem;
+}
+.marriage_info p{
+  font-size: 1.5rem;
+}
 
  /*news grid */
  #news_grid .container{
@@ -250,21 +235,28 @@ width: 100%;
    display: grid;
    grid-template-columns: repeat(3,1fr);
    grid-template-rows: repeat(2,1fr);
-  grid-gap: 1rem;
-  margin: 2rem 16rem;
+  grid-gap: 2rem;
+
  }
 
  .boxes_container img{
-   border-radius: 10px;
+   border-radius: 20px;
  }
 
 
 
-.boxes_container .box1,.box2,.box3,.box4,.box5{
-  display: grid;
-  border-radius: 10px;
+ .box1,.box2,.box3,.box4,.box5{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 20px;
   background-color:white ;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 16%);
+  transition: box-shadow .1s ease-in-out;
+}
 
+.boxes_container .box1:hover,.box2:hover,.box3:hover,.box4:hover,.box5:hover{
+  box-shadow: 0 0 25px 0 rgb(0 0 0 /30%);
 }
 
 .boxes_container .box4{

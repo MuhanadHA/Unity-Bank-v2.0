@@ -1,0 +1,23 @@
+/* max-width:1100px (tablets) */
+@media(max-width:1367px){
+  /* navbar */
+  #navbar .container ul li:nth-child(2){
+    display: none;
+  }
+
+  /* header */
+  #header .container .header_background img {
+    height:110%;
+   }
+  #header .container .header_shadow {
+    height:110%;
+   }
+
+   /* news grid */
+   #news_grid h2 {
+    font-size: 2rem;
+   }
+   #news_grid p {
+    font-size: 1.3rem;
+   }
+}

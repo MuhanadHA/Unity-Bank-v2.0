@@ -1,0 +1,124 @@
+:root{
+  --primary-color:#084a83;
+  --secondary-color:#539ddb;
+  --light-color:#f3f3f3;
+  --dark-color:#333;
+  --black-color:#000;
+  --max-width:1500px;
+}
+
+/* navbar */
+
+#navbar .container {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+grid-gap: 1rem;
+
+}
+
+#navbar .container ul {grid-gap: .8rem;}
+
+#navbar .container ul li:nth-child(2),
+#navbar .container ul li:nth-child(4){
+  display: none;
+}
+
+#navbar .container .logo{width: 35%;}
+
+
+/* header */
+#header{
+  background: url(/img/building_portrait.jpg)center center/cover no-repeat;
+}
+#header h1 {
+ font-size: 3rem;
+}
+
+#header .container .header_background img{
+display: none;
+}
+
+#header .container .header_content{
+background: rgba(0, 0, 0, .4);
+}
+
+/* services */
+#services .container{
+  display: block;
+  height: auto;
+  background: #333;
+}
+
+
+#services .container .travel{
+  background:url(/img/travel.jpg) center center/cover no-repeat;
+}
+
+#services .container .travel_info{
+  background-color:rgba(0, 0, 0, .4);
+  color: white;
+}
+
+#services .container .travel,#services .container .project{
+  display:block;
+}
+#services .container .travel .travel_img,#services .container .project .project_img{
+  display:none;
+}
+
+#services .container .project{
+  background:url(/img/project.jpg) center center/cover no-repeat;
+}
+#services .container .project_info{
+  background-color:rgba(0, 0, 0, .4);
+  color: white;
+}
+
+/* news grid */
+
+
+
+#news_grid .container .boxes_container{
+  margin: auto;
+  grid-gap:1.5rem;
+  grid-template-rows: repeat(5,1fr);
+  grid-template-columns: 1fr;
+}
+
+
+#news_grid .container .boxes_container .box4{
+grid-column:1/span 1;
+}
+
+
+.box1,.box2,.box3,.box4,.box5{
+  justify-content: space-around;
+}
+
+/* footer */
+#footer .container .links_grid{
+  display: flex;
+  flex-direction: column;
+}
+
+#footer .container .logo{
+  display: none;
+}
+.links_1,.links_2{
+  padding: 1rem 0;
+  border-bottom: #333 1px solid;
+}
+
+.links_3{
+  padding: 1rem 0;
+}
+
+/* max-width:324px (small-screens) */
+@media(max-width:324px){
+  #navbar .container ul li:nth-child(3){
+    display: none;
+}
+  
+}
